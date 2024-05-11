@@ -27,6 +27,7 @@
     <launchable type="desktop-id">io.github.wazzaps.Fingerpaint.desktop</launchable>
 
     <releases>
+        <release version="1.4.3" date="2024-05-11" />
         <release version="1.4.2" date="2023-09-02" />
         <release version="1.4.1" date="2023-06-04" />
     </releases>
