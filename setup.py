@@ -34,5 +34,5 @@ setuptools.setup(
     package_data={
         'fingerpaint': ['data/fix_permissions.sh'],
     },
-    python_requires='>=3.7',
+    python_requires='>=3.9',
 )

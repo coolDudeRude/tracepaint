@@ -3,12 +3,12 @@ import _tkinter
 import argparse
 import contextlib
 import os
-import pkg_resources
 import subprocess as sp
 import sys
 import tkinter
 import tkinter.font
 from io import BytesIO
+from importlib.resources import files
 
 import PIL.Image
 import PIL.ImageDraw
@@ -153,7 +153,7 @@ def permission_error():
         print('Touchpad access is currently restricted. Would you like to unrestrict it?', file=sys.stderr)
         response = input('[Yes]/no: ')
         if response.lower() in ('y', 'ye', 'yes', 'ok', 'sure', ''):
-            sp.call(['pkexec', pkg_resources.resource_filename('fingerpaint', 'data/fix_permissions.sh')])
+            sp.call(['pkexec', str(files('fingerpaint') / 'data/fix_permissions.sh')])
         else:
             print('Canceled.', file=sys.stderr)
 
